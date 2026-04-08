@@ -1,0 +1,10 @@
+[
+    {
+        "role": "user",
+        "content": "generar reporte}"
+    },
+    {
+        "role": "assistant",
+        "content": "De acuerdo a lo solicitado, procedo a realizar el análisis del texto administrativo proporcionado:\n\nFASE 1 – IDENTIFICACIÓN:\nEn el texto se identifican los siguientes documentos relevantes:\n1. Descripción del Sistema de Gestión Documental v5.1.\n\nFASE 2 – EXTRACCIÓN:\n1. Tipo de documento: Descripción del Sistema\nNúmero: v5.1\nOficina de origen: No se indica\nOficina de destino: No se indica\nAsunto: Sistema de Gestión Documental v5.1\nFecha: No se indica\nDescripción objetiva: El Sistema de Gestión Documental v5.1 de la ONPE es un software utilizado para gestionar los documentos administrativos de la institución, promover el cero papel, ahorrar en insumos y optimizar el proceso de la gestión documental. Está integrado con el Software FirmaONPE, lo cual garantiza la autenticidad de los documentos digitales emitidos.\n\nFASE 3 – ORGANIZACIÓN:\nAntecedentes:\nEl Sistema de Gestión Documental v5.1 es un software utilizado por la Oficina Nacional de Procesos Electorales (ONPE) para la gestión de documentos administrativos de la institución. Dicho sistema permite emitir, recibir, derivar, atender y archivar documentos, así como realizar consultas, seguimiento y obtener reportes. Adicionalmente, el Sistema de Gestión Documental v5.1 está integrado con el Software FirmaONPE, lo cual garantiza la autenticidad de los documentos digitales emitidos."
+    }
+]
