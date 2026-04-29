@@ -21,8 +21,8 @@ def llamar_claude(prompt):
     }
 
     payload = {
-        "model": "claude-haiku-4-5",
-        "max_tokens": 4000,
+        "model": "claude-3-haiku-20240307",
+        "max_tokens": 2000,
         "messages": [{"role": "user", "content": prompt}]
     }
 
@@ -262,98 +262,47 @@ V. RECOMENDACIONES
 
 2. Se recomienda a la [Oficina / Gerencia / Unidad Orgánica competente], disponer ........................................, conforme a las conclusiones expuestas, asegurando la observancia de los principios de legalidad y debido procedimiento administrativo.
 """
-PROMPT_JURISPRUDENCIA = """
-Actúa como especialista en Derecho Administrativo peruano y redacción de opiniones legales en el sector público.
+PROMPT_JURISPRUDENCIA="""
+Actúa como especialista en Derecho Administrativo y redacción de opiniones legales en el sector público peruano.
+Redacta exclusivamente el apartado de Jurisprudencia aplicable, identificando y desarrollando precedentes similares al caso planteado
 
-OBJETIVO
-Redactar el apartado de jurisprudencia aplicable para el tema de la opinión legal solicitada a generar, organizando los precedentes por principios jurídicos relevantes al caso, con énfasis en criterios aplicables a gobiernos locales (municipalidades distritales, provinciales) y gobiernos regionales.
+METODOLOGÍA:
+Aplicar PLAN AND SOLVE + CHAIN OF VERIFICATION.
 
-ENTRADA DEL CASO:
+OBJETIVO:
+Generar únicamente el apartado:
+"VI. JURISPRUDENCIA APLICABLE"
+
+ENTRADA:
 {descripcion_del_caso}
 
-METODOLOGÍA
-Aplicar el método:
+FASE 1 – PLAN:
+- Identificar problema jurídico central.
+- Identificar principios administrativos involucrados.
 
-PLAN → SOLVE → CHAIN OF VERIFICATION
+FASE 2 – SOLVE:
+- Seleccionar jurisprudencia del TC, Corte Suprema, OSCE y Contraloría.
+- Desarrollar:
+   • Número de expediente
+   • Criterio jurídico
+   • Principio desarrollado
+   • Aplicación concreta
 
-FASE 1 – PLAN
-1. Identificar el problema jurídico central.
-2. Identificar principios administrativos relevantes:
-   - legalidad
-   - debido procedimiento
-   - cosa decidida administrativa
-   - actos propios
-   - razonabilidad
-   - seguridad jurídica
-   - notificación y conocimiento efectivo
-   - plazos administrativos
-   - impugnación administrativa
-   - competencia administrativa en gobiernos locales
+FASE 3 – VERIFICACIÓN:
+- Confirmar coherencia normativa.
+- Confirmar pertinencia al caso.
+- Eliminar precedentes dudosos.
+- Evitar contradicciones legales.
 
-FASE 2 – SOLVE
-Para cada principio identificado:
-
-1. Crear un subtítulo numerado.
-Ejemplo:
-2.1. COSA DECIDIDA ADMINISTRATIVA
-
-2. Seleccionar jurisprudencia relevante y similar al caso, priorizando:
-
-   - Gobiernos Regionales
-   - Municipalidades provinciales
-   - Municipalidades Distritales
-
-3. Incluir de manera OBLIGATORIA, cuando sea pertinente al caso:
-   - Pronunciamientos relacionados con municipalidades distritales y provinciales
-   - Casos vinculados a gobiernos regionales
-   - Criterios sobre gestión pública, actos administrativos locales, procedimientos sancionadores, contrataciones públicas o funciones municipales
-
-4. Cada jurisprudencia debe contener:
-
-   - Nombre del órgano
-   - Número de expediente o resolución
-   - Año (si es posible)
-   - Relación breve con el caso (1 línea opcional)
-
-5. Luego incluir una cita textual con el siguiente formato:
-
-> "Texto del criterio jurisprudencial relevante"
-
-FASE 3 – CHAIN OF VERIFICATION
-
-Verificar que:
-
-- La jurisprudencia exista o sea jurídicamente plausible en el contexto peruano
-- Sea coherente con el derecho administrativo peruano
-- Sea aplicable a entidades públicas, especialmente gobiernos locales o regionales
-- Guarde relación directa con el problema jurídico
-- No existan contradicciones normativas
-- Las citas sean consistentes con el criterio jurídico desarrollado
-
-REGLAS IMPORTANTES
-
-- No inventar jurisprudencia inexistente.
-- Priorizar precedentes del Gobiernos regionales, Provinciales y distritales
-- Incluir criterios aplicables a municipalidades y gobiernos regionales.
-- Usar citas textuales entre comillas.
-- Usar el símbolo > para citas.
-- Agrupar la jurisprudencia por principio jurídico.
-- Mantener lenguaje técnico-jurídico.
-
-FORMATO DE SALIDA
+FORMATO DE SALIDA:
 
 VI. JURISPRUDENCIA APLICABLE
 
-2.1. [PRINCIPIO JURÍDICO]
-
-Órgano – Expediente o Resolución (Año):
-
-> "Cita textual del criterio jurisprudencial"
-
-(Desarrollar entre 2 y 3 precedentes por principio)
-
-Desarrollar entre 3 y 5 principios jurídicos relevantes al caso.
-"""
+6.1 Tribunal Constitucional
+6.2 Corte Suprema
+6.3 Tribunal de Contrataciones del Estado
+6.4 Contraloría
+6.5 Aplicación Integrada al Caso """
 
 PROMPT_INFORME_LEGAL = f"""
 Actúa como abogado especialista en derecho administrativo peruano,
@@ -453,3 +402,4 @@ Informe legal:
 {informe}
 """
     return llamar_claude(prompt)
+

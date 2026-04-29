@@ -15,7 +15,7 @@ ENTRENAMIENTO_PATH = "/content/drive/MyDrive/Analisis/Entrenamiento.txt"
 RESULTADOS_DIR = "/content/drive/MyDrive/resultados"
 
 CLAUDE_API_URL = "https://api.anthropic.com/v1/messages"
-CLAUDE_API_KEY = "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"
+CLAUDE_API_KEY = "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"
 CLAUDE_API_VERSION = "2023-06-01"
 
 MODELO = "CLAUDE"
@@ -52,8 +52,8 @@ def llamar_claude(prompt):
     }
 
     payload = {
-        "model": "claude-3-haiku-20240307",
-        "max_tokens": 1200,
+        "model": "claude-haiku-4-5",
+        "max_tokens": 1500,
         "messages": [{"role": "user", "content": prompt}]
     }
 

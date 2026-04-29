@@ -103,14 +103,13 @@ with col1:
 
 with col2:
     modelo = st.selectbox(
-    "Modelo Jurídico",
-    [
-        "Modelo OAJ v1 (Recomendado)",
-        "Modo Análisis",
-        "Modo Redacción Formal"
-    ],
-    index=2  # Selecciona por defecto "Modo Redacción Formal"
-)
+        "Modelo Jurídico",
+        [
+            "Modelo OAJ v1 (Recomendado)",
+            "Modo Análisis",
+            "Modo Redacción Formal"
+        ]
+    )
 
 # ================= LAYOUT PRINCIPAL =================
 main_col, right_col = st.columns([3, 1])

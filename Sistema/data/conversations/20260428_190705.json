@@ -1,0 +1,18 @@
+[
+    {
+        "role": "user",
+        "content": "puedes hacer un informe legal"
+    },
+    {
+        "role": "assistant",
+        "content": "⚠️ Primero debe cargar y procesar un expediente."
+    },
+    {
+        "role": "user",
+        "content": "puedes ahcer un informe legal"
+    },
+    {
+        "role": "assistant",
+        "content": "⚠️ Primero debe cargar y procesar un expediente."
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "role": "user",
+        "content": "Generasr opinion legal"
+    },
+    {
+        "role": "assistant",
+        "content": ""
+    }
+]
