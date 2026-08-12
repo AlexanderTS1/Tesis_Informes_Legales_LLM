@@ -6,7 +6,7 @@ import requests
 
 # ================= CONFIGURACIÓN =================
 CLAUDE_API_URL = "https://api.anthropic.com/v1/messages"
-CLAUDE_API_KEY = "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"
+CLAUDE_API_KEY = "apikey"
 CLAUDE_API_VERSION = "2023-06-01"
 
 MODELO = "CLAUDE"
